@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <h1>Daily To-Do list manager</h1>
+    <div class="container1">
+
+        <header class="container__header">
+            <span class="dayName">nap neve</span><br>
+            <span class="date">dátum</span>
+        </header>
+
+        <div class="addTasks">
+            <input class="add__input" type="text" placeholder="Take the garbage out.">
+            <button class="add__btn" type="submit">+</button>
+        </div>
+
+        <div class="switch">
+            <header class="ToDos__header">You have <span class="pending__number">0</span> pending items.</header>
+            <div class="pendingToDos">
+                                                  
+            </div>
+
+            <header class="ToDos__header">Completed tasks: <span class="completed__percent">0%</span> </header>
+            <div class="completedToDos">
+
+            </div>
+
+            <footer class="footer">
+                <button class="btn__showAndHide">
+                    Show/Hide complete
+                </button>
+
+                <button class="btn__clearAll">
+                    Clear all
+                </button>
+            </footer>
+        </div>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/d0f05553fb.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

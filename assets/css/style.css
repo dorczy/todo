@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root {
+    --light-grey: #f5f5f5;
+    --grey: #dbdbdb;
+    --dark-grey: #b8b8b8;
+    --darkest-grey: #808080;
+    --bg-color1: #eed582;
+    --bg-color2: #69d3f7;
+    --white: #FFFFFF;
+    --red: #c97373;
+    --dark-red: #bd5757;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-image: linear-gradient(0deg, var(--bg-color1) 0%, var(--bg-color2) 100%);
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input:focus, button:focus {
+    outline: var(--grey) solid 1px;
+    border-radius: 5px;
+}
+
+h1 {
+    font-weight: 900;
+    color: var(--white);
+    margin: 1rem;
+}
+
+.container1, .container2 {
+    background-color: var(--light-grey);
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 29rem;
+}
+
+.container__header {
+    color: var(--bg-color2);
+    padding: .5rem 0;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.addTasks {
+    padding: .8rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.add__input {
+    width: 90%;
+    font-size: .8rem;
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    padding: .5rem 1rem;
+}
+.add__btn {
+    line-height: 2rem;
+    font-size: 2rem;
+    width: 8%;
+    border: 0;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--grey);
+}
+.add__btn:hover {
+    background-color: var(--dark-grey);
+}
+::placeholder {
+    color: var(--darkest-grey);
+    font-style: italic;
+}
+
+.pendingToDos, .completedToDos {
+    padding: .6rem 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 9rem;
+}
+.ToDos__header {
+    padding: .5rem 0;
+}
+.pending__number, .completed__percent {
+    font-weight: 900;
+}
+.pending__items, .completed__items {
+    margin: .5rem;
+    padding: 0 0 0 .8rem;
+    background-color: var(--grey);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+.checkbox {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--light-grey);
+    cursor: pointer;
+    padding: .5rem;
+    margin: 0;
+}
+.label {
+    padding: .3rem 1rem;
+}
+.deleteBtn {
+    color: var(--white);
+    background-color: var(--red);
+    padding: .8rem;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: visibility .3s ease;
+    visibility: hidden;
+}
+.deleteBtn--hover {
+    transition: visibility .3s ease;
+    visibility: visible;
+}
+.deleteBtn:hover {
+    background-color: var(--dark-red);
+}
+
+.completed__items {
+    background-color: var(--white);
+    color: var(--dark-grey);
+    text-decoration: line-through;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn__showAndHide, .btn__clearAll {
+    margin: 0 1rem;
+    padding: .8rem;
+    background-color: transparent;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--grey);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+}
+.btn__showAndHide:hover, .btn__clearAll:hover {
+    background-color: var(--grey);
+    border-radius: 5px;
+}
+
+.noToDos__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 5rem;
+}
+.noToDos__content {
+    font-size: 2rem;
+}
+
+.hidden {
+    display: none;
+}
